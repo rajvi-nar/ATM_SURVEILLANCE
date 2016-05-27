@@ -1,0 +1,11 @@
+%main file calling function
+clc
+clear all
+clear
+M = dlmread('ptf.txt');
+X = M(:,[1:6]);
+Y = M(:,7);
+theta = zeros(6,1);
+[grad] = lrCostFunctioncopy(theta, X, Y, 10);
+grad
+
